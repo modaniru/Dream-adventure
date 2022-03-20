@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6175143319794967128}
   - component: {fileID: 6175143319794967127}
+  - component: {fileID: 8943653155724594424}
   - component: {fileID: 6175143319794967126}
   - component: {fileID: 6175143319794967129}
   m_Layer: 0
@@ -84,6 +85,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8943653155724594424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6175143319794967125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ddf0d0607d961649a157a822da3c8de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionDamage: 1
+  collisionTag: Player
 --- !u!95 &6175143319794967126
 Animator:
   serializedVersion: 3

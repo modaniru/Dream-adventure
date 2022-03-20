@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMoveScript : MonoBehaviour
 {
     [SerializeField] float speed = 3f; // скорость движения
-    [SerializeField] int lives = 5; // скорость движения
 
     private Rigidbody2D rb;
     private SpriteRenderer sp;
