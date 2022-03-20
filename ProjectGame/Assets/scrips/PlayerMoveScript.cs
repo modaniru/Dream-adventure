@@ -36,4 +36,5 @@ public class PlayerMoveScript : MonoBehaviour
         sp.flipX = dir.x < 0.0f;
     }
 
+    
 }
