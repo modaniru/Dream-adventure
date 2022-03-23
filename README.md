@@ -1,2 +1,0 @@
-# Dream-adventure
-Курсовой проект
