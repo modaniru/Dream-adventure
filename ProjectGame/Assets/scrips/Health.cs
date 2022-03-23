@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
     public int lives;
     public int maxlives;
+    string SceneName;
+
+    public void RestartLevel()
+    {
+
+        SceneManager.LoadScene(SceneName);
+    }
 
     public void TakeHit(int damage)
     {
@@ -15,6 +23,7 @@ public class Health : MonoBehaviour
         if (lives <= 0)
         {
             Destroy(gameObject);
+            RestartLevel();
         }
     }
 
@@ -28,16 +37,9 @@ public class Health : MonoBehaviour
         }
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
-
+        SceneName = SceneManager.GetActiveScene().name;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
