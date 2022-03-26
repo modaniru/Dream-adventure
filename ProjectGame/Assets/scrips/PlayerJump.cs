@@ -39,7 +39,7 @@ public class PlayerJump : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundlayer);
     }
 
-    void Jump()
+    public void Jump()
     {
         rb.velocity = Vector2.up * jumpForce;
     }
