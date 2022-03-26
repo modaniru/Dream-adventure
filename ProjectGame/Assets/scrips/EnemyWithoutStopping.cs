@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyWithoutStopping : MonoBehaviour
 {
     [SerializeField] private List<Transform> points;
     [SerializeField] private float speed = 3f;
@@ -31,9 +31,9 @@ public class Enemy : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, currentPoint, step);
 
-            if (Vector3.Distance(transform.position,currentPoint) < 0.3f)
+            if (Vector3.Distance(transform.position, currentPoint) < 0.3f)
             {
-                StartCoroutine(Idle());
+                ChooseNextPoint();
             }
         }
     }

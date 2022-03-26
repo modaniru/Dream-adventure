@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8943653155724594424}
   - component: {fileID: 6175143319794967126}
   - component: {fileID: 6175143319794967129}
+  - component: {fileID: -8314479414757152170}
+  - component: {fileID: -565684352178969768}
   m_Layer: 0
   m_Name: book1
   m_TagString: Untagged
@@ -144,3 +146,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.77575636, y: 0.88401175}
   m_EdgeRadius: 0
+--- !u!114 &-8314479414757152170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6175143319794967125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c33fc0f7ec2ebc489e7473958c5fc38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: []
+  speed: 3
+--- !u!50 &-565684352178969768
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6175143319794967125}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
