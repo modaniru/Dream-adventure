@@ -1,0 +1,64 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class Fader : MonoBehaviour
+{
+    [SerializeField] Button retryButton;
+    [SerializeField] Text text;
+
+    private bool isRestart;
+
+    private float alpha; // прозрачность
+    private CanvasGroup canvasGroup;
+
+    private void Awake()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+        alpha = 1;
+        retryButton.gameObject.SetActive(false);
+    }
+
+    public IEnumerator Fade(bool toVisible)
+    {
+        float step = toVisible ? 0.1f : -0.1f;
+        int endValue = toVisible ? 1 : 0;
+
+        while (alpha != endValue) // если проз не достиг нужного рез
+        {
+            alpha += step; // увел или умен знач
+            canvasGroup.alpha = alpha;
+            // хз почему но изменяется знач иногда не точно.
+            if (alpha < 0) // безопасность
+            {
+                alpha = 0;
+            }
+            else if (alpha > 1)
+            {
+                alpha = 1;
+            }
+
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
+    public IEnumerator StartBlinkRetryButton() // шоб кнопка мигала
+    {
+        retryButton.gameObject.SetActive(true);
+        Image image = retryButton.GetComponent<Image>();
+
+        while (!isRestart)
+        {
+            image.enabled = false;
+
+            yield return new WaitForSeconds(0.2f);
+
+            image.enabled = true;
+
+            yield return new WaitForSeconds(0.3f);
+        }
+    }
+}

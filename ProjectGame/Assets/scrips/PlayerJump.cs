@@ -7,11 +7,14 @@ public class PlayerJump : MonoBehaviour
 {
     float yInput;
 
+    public bool onSlime = false;
+
+
     Rigidbody2D rb;
     SpriteRenderer sp;
 
     public float jumpForce;
-    bool isGrounded;
+    public bool isGrounded;
     public Transform groundCheck;
     public LayerMask groundlayer;
 
@@ -37,6 +40,10 @@ public class PlayerJump : MonoBehaviour
         yInput = Input.GetAxis("Vertical");
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundlayer);
+        if (onSlime)
+        {
+            isGrounded = false;
+        }
     }
 
     public void Jump()

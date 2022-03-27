@@ -39,5 +39,14 @@ public class PlayerMoveScript : MonoBehaviour
         sp.flipX = dir.x < 0.0f;
     }
 
-    
+    public void SetSpeed(float bonusSpeed)
+    {
+        speed += bonusSpeed;
+    }
+
+    public void ReduceSpeed(float bonusSpeed)
+    {
+        speed -= bonusSpeed;
+    }
+
 }

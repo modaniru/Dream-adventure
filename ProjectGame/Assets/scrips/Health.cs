@@ -2,28 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private GameController gameController;
     public int lives;
     public int maxlives;
-    string SceneName;
+    public bool isDead = false;
 
-    public void RestartLevel()
+
+
+    public void Death()
     {
+        Destroy(gameObject);
+        gameController.LoseGame();
+    }
 
-        SceneManager.LoadScene(SceneName);
+    public bool DeathCheck(int lives)
+    {
+        if (lives <= 0)
+        {
+            return true;
+        }
+        return false;
     }
 
     public void TakeHit(int damage)
     {
         lives -= damage;
-
-        if (lives <= 0)
+        isDead = DeathCheck(lives);
+        if (isDead == true)
         {
-            Destroy(gameObject);
-            RestartLevel();
+            Death();
         }
     }
 
@@ -37,9 +49,6 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void Awake()
-    {
-        SceneName = SceneManager.GetActiveScene().name;
-    }
+
 
 }
