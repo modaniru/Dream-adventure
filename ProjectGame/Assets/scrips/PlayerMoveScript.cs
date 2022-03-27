@@ -9,6 +9,9 @@ public class PlayerMoveScript : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sp;
 
+    [Header("Player Animation Settings")]
+    public Animator animator;
+
     void Start()
     {
 
@@ -23,6 +26,8 @@ public class PlayerMoveScript : MonoBehaviour
 
     void Update()
     {
+        float HorizontalMove = Input.GetAxisRaw("Horizontal") * speed;
+        animator.SetFloat("HorizontalMove", Mathf.Abs(HorizontalMove));
         if (Input.GetButton("Horizontal"))
             Run();
     }
@@ -30,9 +35,7 @@ public class PlayerMoveScript : MonoBehaviour
     void Run()
     {
         Vector3 dir = transform.right * Input.GetAxis("Horizontal");
-
         transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
-
         sp.flipX = dir.x < 0.0f;
     }
 
