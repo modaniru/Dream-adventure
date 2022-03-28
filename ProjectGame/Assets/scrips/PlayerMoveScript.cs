@@ -49,4 +49,20 @@ public class PlayerMoveScript : MonoBehaviour
         speed -= bonusSpeed;
     }
 
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.CompareTag("Platform"))
+        {
+            this.transform.parent = coll.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D coll)
+    {
+        if (coll.gameObject.CompareTag("Platform"))
+        {
+            this.transform.parent = null;
+        }
+    }
+
 }
