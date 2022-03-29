@@ -8,6 +8,9 @@ public class PlayerMoveScript : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer sp;
+    public int money = 0;
+
+    private Interactable interactableObj;
 
     [Header("Player Animation Settings")]
     public Animator animator;
@@ -30,6 +33,11 @@ public class PlayerMoveScript : MonoBehaviour
         animator.SetFloat("HorizontalMove", Mathf.Abs(HorizontalMove));
         if (Input.GetButton("Horizontal"))
             Run();
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            InteractWithObj();
+        }
     }
 
     void Run()
@@ -63,6 +71,44 @@ public class PlayerMoveScript : MonoBehaviour
         {
             this.transform.parent = null;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.CompareTag("Interactable"))
+        {
+            interactableObj = coll.gameObject.GetComponent<Interactable>();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D coll)
+    {
+        if (coll.gameObject.CompareTag("Interactable"))
+        {
+            interactableObj = null;
+        }
+    }
+
+    private void InteractWithObj()
+    {
+        if (interactableObj != null)
+        {
+            interactableObj.Interact();
+        }
+    }
+
+    public void AddCoin(int value)
+    {
+        money += value;
+    }
+
+    public bool CheckCoin(int money)
+    {
+        if (money >= 3)
+        {
+            return true;
+        }
+        return false;
     }
 
 }
