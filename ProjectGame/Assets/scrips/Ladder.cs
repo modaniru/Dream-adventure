@@ -31,7 +31,7 @@ public class Ladder : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Player"))
         {
-            coll.GetComponent<Rigidbody2D>().gravityScale = 1;
+            coll.GetComponent<Rigidbody2D>().gravityScale = 2;
         }
     }
 }
