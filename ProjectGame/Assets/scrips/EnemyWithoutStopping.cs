@@ -31,7 +31,7 @@ public class EnemyWithoutStopping : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, currentPoint, step);
 
-            if (Vector3.Distance(transform.position, currentPoint) < 0.3f)
+            if (Vector3.Distance(transform.position, currentPoint) < 0.001f)
             {
                 ChooseNextPoint();
             }
