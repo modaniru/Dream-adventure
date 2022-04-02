@@ -192,6 +192,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1301592462}
     m_Modifications:
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.data[0]
+      value: 
+      objectReference: {fileID: 1131071247}
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.data[1]
+      value: 
+      objectReference: {fileID: 1997570885}
     - target: {fileID: 6175143319794967125, guid: bc01363b1247617469911e06307f87d2, type: 3}
       propertyPath: m_Name
       value: book1 (7)
@@ -1034,6 +1046,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851289146}
     m_Modifications:
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.data[0]
+      value: 
+      objectReference: {fileID: 1883410800}
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.data[1]
+      value: 
+      objectReference: {fileID: 318960314}
     - target: {fileID: 6175143319794967125, guid: bc01363b1247617469911e06307f87d2, type: 3}
       propertyPath: m_Name
       value: book1 (7)
@@ -21152,6 +21176,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 498984040}
     m_Modifications:
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.data[0]
+      value: 
+      objectReference: {fileID: 1501627613}
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.data[1]
+      value: 
+      objectReference: {fileID: 1939462237}
     - target: {fileID: 6175143319794967125, guid: bc01363b1247617469911e06307f87d2, type: 3}
       propertyPath: m_Name
       value: book1 (7)
@@ -21304,6 +21340,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 905057939}
     m_Modifications:
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.data[0]
+      value: 
+      objectReference: {fileID: 1123277915}
+    - target: {fileID: -8314479414757152170, guid: bc01363b1247617469911e06307f87d2, type: 3}
+      propertyPath: points.Array.data[1]
+      value: 
+      objectReference: {fileID: 745094409}
     - target: {fileID: 6175143319794967125, guid: bc01363b1247617469911e06307f87d2, type: 3}
       propertyPath: m_Name
       value: book1 (7)
