@@ -10,6 +10,9 @@ public class Fader : MonoBehaviour
     [SerializeField] Button retryButton;
     [SerializeField] Text text;
 
+    public bool inGame;
+    
+     
     private bool isRestart;
 
     private float alpha; // прозрачность
@@ -18,7 +21,12 @@ public class Fader : MonoBehaviour
     private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
-        alpha = 1;
+        if (inGame)
+        {
+            alpha = 1;
+        }
+        else
+            alpha = alpha;
         retryButton.gameObject.SetActive(false);
     }
 

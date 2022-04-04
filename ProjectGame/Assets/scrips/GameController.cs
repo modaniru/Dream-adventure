@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private Fader fader;
+    public bool AfterMenu;
     string SceneName;
 
 

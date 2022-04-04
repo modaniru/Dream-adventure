@@ -2178,6 +2178,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1191473497589442304, guid: a6fba2b5939c7b946b97dc26ffe683c5, type: 3}
+      propertyPath: inGame
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1191473497589442305, guid: a6fba2b5939c7b946b97dc26ffe683c5, type: 3}
       propertyPath: m_Name
       value: Fader
@@ -2632,6 +2636,10 @@ PrefabInstance:
       propertyPath: fader
       value: 
       objectReference: {fileID: 561903137}
+    - target: {fileID: 4240523402509749727, guid: 191aea9dcdee7dc428302fae550adea9, type: 3}
+      propertyPath: AfterMenu
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191aea9dcdee7dc428302fae550adea9, type: 3}
 --- !u!1001 &1508907287
