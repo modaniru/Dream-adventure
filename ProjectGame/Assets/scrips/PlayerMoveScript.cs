@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMoveScript : MonoBehaviour
 {
@@ -29,6 +30,10 @@ public class PlayerMoveScript : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
         float HorizontalMove = Input.GetAxisRaw("Horizontal") * speed;
         animator.SetFloat("HorizontalMove", Mathf.Abs(HorizontalMove));
         if (Input.GetButton("Horizontal"))
