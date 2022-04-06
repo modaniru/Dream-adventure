@@ -11,6 +11,8 @@ public class PlayerMoveScript : MonoBehaviour
     private SpriteRenderer sp;
     public int money = 0;
 
+    private float originalSpeed;
+
     private Interactable interactableObj;
 
     [Header("Player Animation Settings")]
@@ -18,7 +20,7 @@ public class PlayerMoveScript : MonoBehaviour
 
     void Start()
     {
-
+        originalSpeed = speed;
     }
 
     void Awake()

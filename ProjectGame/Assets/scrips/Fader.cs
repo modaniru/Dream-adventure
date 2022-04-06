@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Fader : MonoBehaviour
 {
-    [SerializeField] Button retryButton;
+    private Transform retryButton;
     [SerializeField] Text text;
 
     public bool inGame;
@@ -27,6 +27,7 @@ public class Fader : MonoBehaviour
         }
         else
             alpha = alpha;
+        retryButton = transform.Find("Retry Button");
         retryButton.gameObject.SetActive(false);
     }
 

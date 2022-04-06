@@ -14,9 +14,13 @@ public class EnemyWithoutStopping : MonoBehaviour
 
     void Start()
     {
-        currentPoint = points[0].position;
-        ChooseDirection();
-        walking = true;
+        if(points.Count != 0)
+        {
+            currentPoint = points[0].position;
+            ChooseDirection();
+            walking = true;
+        }
+        
     }
 
     void Update()

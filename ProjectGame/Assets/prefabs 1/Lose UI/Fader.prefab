@@ -281,8 +281,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26837211e83eb0248b855497f6288871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  retryButton: {fileID: 1191473497593395553}
+  retryButton: {fileID: 0}
   text: {fileID: 1191473497912554860}
+  inGame: 0
 --- !u!1 &1191473497593395557
 GameObject:
   m_ObjectHideFlags: 0
