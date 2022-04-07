@@ -13,10 +13,14 @@ public class PlayerJump : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sp;
 
+
     public float jumpForce;
     public bool isGrounded;
+    public static bool onLadder = false;
     public Transform groundCheck;
     public LayerMask groundlayer;
+    [Header("Player Animation Settings")]
+    public Animator animator;
 
     private void Awake()
     {
@@ -26,6 +30,15 @@ public class PlayerJump : MonoBehaviour
 
     void Update()
     {
+
+        if (!isGrounded && !onLadder)
+        {
+            animator.SetBool("isJump", true);
+        }
+        else
+        {
+            animator.SetBool("isJump", false);
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isGrounded)

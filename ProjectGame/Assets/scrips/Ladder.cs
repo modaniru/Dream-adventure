@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 
 public class Ladder : MonoBehaviour
+
 {
     [SerializeField] float speed = 5f;
 
@@ -11,6 +12,7 @@ public class Ladder : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Player"))
         {
+            PlayerJump.onLadder = true;
             coll.GetComponent<Rigidbody2D>().gravityScale = 0;
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
@@ -31,6 +33,7 @@ public class Ladder : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Player"))
         {
+            PlayerJump.onLadder = false;
             coll.GetComponent<Rigidbody2D>().gravityScale = 2;
         }
     }
