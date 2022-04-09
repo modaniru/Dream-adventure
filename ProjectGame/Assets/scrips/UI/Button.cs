@@ -2,24 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour, Interactable
+public class Button : MonoBehaviour
 {
-    bool isPressed = false;
 
-    public void Interact()
+    [SerializeField] private Door door;
+    private void OnTriggerEnter2D(Collider2D coll)
     {
-        if (Input.GetKey(KeyCode.E))
+        if (coll.gameObject.CompareTag("Player"))
         {
-            isPressed = true;
+            this.gameObject.GetComponent<Animator>().SetTrigger("Button");
+            door.OpenDoor();
         }
-        else 
-            isPressed = false;
-    }
-
-    public bool Check()
-    {
-        if (isPressed)
-            return true;
-        return false;
     }
 }
