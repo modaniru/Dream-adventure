@@ -12,6 +12,9 @@ public class PlayerMoveScript : MonoBehaviour
     public int money = 0;
 
     private bool isGround = false;
+    private const float CAP_SPEED = 15.0f;
+    private const float DEFAULT_SPEED = 8.0f;
+    private const float MIN_SPEED = 2f;
 
     private Interactable interactableObj;
 
@@ -53,14 +56,17 @@ public class PlayerMoveScript : MonoBehaviour
         sp.flipX = dir.x < 0.0f;
     }
 
-    public void SetSpeed(float bonusSpeed)
+    public void SetSpeed(float percent)
     {
-        speed += bonusSpeed;
-    }
-
-    public void ReduceSpeed(float bonusSpeed)
-    {
-        speed -= bonusSpeed;
+        speed *= percent;
+        if (speed > CAP_SPEED)
+        {
+            speed = CAP_SPEED;
+        }
+        else if (speed < MIN_SPEED)
+        {
+            speed = MIN_SPEED;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D coll)
